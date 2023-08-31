@@ -36,10 +36,10 @@ const Dashboard = () => {
       if(data){
         root.style.setProperty('--primary-color', data.themecolor);
         root.style.setProperty('--background-color', data.themecolor);
-    }
+      }
     }
     fetchData();
-  },[primaryColor])
+  },[])
 
   const handleLogout = async () => {
     localStorage.removeItem('userInfo')
