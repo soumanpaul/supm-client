@@ -37,12 +37,7 @@ const SignInForm = () => {
     e.preventDefault();
    
     try {
-      // const { data } = await login({ username, password });
-
-      const data = await axios.post('https://ndoe-backend-production.up.railway.app/api/users/auth', {
-         username, password 
-      });
-      console.log("Login response ",data)
+      const { data } = await login({ username, password });
 
       const root = document.documentElement;
       root.style.setProperty('--primary-color', data.themecolor);
